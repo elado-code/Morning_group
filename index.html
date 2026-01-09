@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מבוא למערכות מידע וניהול נתונים</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@latest/babel.min.js"></script>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+    function Header() {
+        return (
+            <header>
+                <h1>מבוא למערכות מידע וניהול נתונים</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#about">מה זה מערכות מידע?</a></li>
+                        <li><a href="#types">סוגי מערכות מידע</a></li>
+                        <li><a href="#use-cases">שימושים בסיסיים</a></li>
+                    </ul>
+                </nav>
+            </header>
+        );
+    }
+
+    function About() {
+        return (
+            <section id="about">
+                <h2>מה זה מערכות מידע?</h2>
+                <p>מערכת מידע היא תשתית שמאפשרת לייצוג ולניהול מידע באמצעות נתונים ותבניות. סוגי המערכות נ includו בסיסיות כגון מערכת היסטוריה, מערכת ניהול מוקדש והעתקה.</p>
+            </section>
+        );
+    }
+
+    function Types() {
+        return (
+            <section id="types">
+                <h2>סוגי מערכות מידע</h2
