@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מבוא למערכות מידע וניהול נתונים</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .header { background-color: #4CAF50; color: white; padding: 20px; text-align: center; }
+        .nav { display: flex; justify-content: space-around; background-color: #f1f1f1; padding: 10px 0; }
+        .nav a { color: black; text-decoration: none; padding: 15px 20px; font-size: 18px; }
+        .content { padding: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>מבוא למערכות מידע וניהול נתונים</h1>
+</div>
+
+<div class="nav">
+    <a href="#home">בית</a>
+    <a href="#about">אודות</a>
+    <a href="#course-content">תוכן קורס</a>
+    <a href="#faq">שאלות נפוצות</a>
+    <a href="#contact">צור קשר</a>
+</div>
+
+<div class="content">
+    <!-- תוכן האתר -->
+</div>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
