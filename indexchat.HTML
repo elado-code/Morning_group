@@ -1,0 +1,110 @@
+You are a senior frontend engineer and UI/UX designer. Build a modern, aesthetically premium **Course Management** web app as a **single, self-contained HTML file** (one file only) using **vanilla HTML + CSS + JavaScript**. No build steps. No separate files. Everything must be embedded in this single HTML.
+
+# HARD REQUIREMENTS (MUST FOLLOW)
+1) Output ONLY ONE HTML file (full document with <html>, <head>, <body>).
+2) No external dependencies (no React, no Vue, no Tailwind CDN, no external icon libs). Use pure CSS + JS.
+3) Professional design: enterprise-grade, sleek, minimal, modern (Notion/Linear/Coursera admin vibe).
+4) Must include BOTH light & dark mode with a toggle. Default to system preference, persist to localStorage.
+5) Responsive: works beautifully on mobile, tablet, desktop.
+6) Accessible: keyboard navigation, visible focus styles, ARIA labels where needed, proper semantic HTML.
+7) Provide realistic mock data (courses/modules/lessons/users). Persist edits in localStorage.
+8) Use modern UI patterns: sidebar + topbar, cards, tables, modals, drawers, toasts, skeleton loaders, empty states.
+9) Use a consistent design system (CSS variables/tokens) for spacing, radii, shadows, typography, colors.
+10) Include micro-interactions: hover/focus states, subtle transitions, reduced-motion support.
+11) All features are front-end only (no backend). Simulate everything in JS with localStorage.
+
+# APP SCOPE: COURSE MANAGEMENT
+Implement a mini LMS/CMS with:
+- Roles (mock): Admin / Instructor / Student (switch via UI, changes permissions + visible actions).
+- Dashboard:
+  - KPIs: total courses, active enrollments, completion rate, overdue reviews.
+  - Activity feed (recent edits/enrollments).
+  - Mini charts (pure CSS or inline SVG; no libraries).
+- Courses page:
+  - Table/list view toggle
+  - Search (title/instructor/tags)
+  - Filters: status (Draft/Published/Archived), category, difficulty
+  - Sort: updated, popularity, completion
+  - Bulk actions (archive/publish) for Admin/Instructor
+  - “Create Course” button (Admin/Instructor only)
+- Course details:
+  - Header with thumbnail placeholder, title, status pill, updated time, tags
+  - Tabs: Overview / Curriculum / Students / Settings
+  - Overview: description, outcomes, requirements, metrics
+  - Curriculum:
+    - Modules and lessons (Course → Module → Lesson)
+    - Lesson types: Video, Reading (Markdown-like), Attachment
+    - Drag & drop reordering of modules and lessons (pure JS HTML5 DnD)
+    - Inline editing (rename module/lesson)
+    - Add module / add lesson actions (role-based)
+  - Students tab:
+    - Enrollment list with progress bars
+    - “Enroll student” modal (Admin/Instructor)
+    - Student view shows “My progress” + continue button
+  - Settings tab:
+    - Change status, category, difficulty, visibility
+    - Danger zone: archive/delete (Admin only; delete requires confirm modal)
+- Progress tracking:
+  - Student can mark lessons complete
+  - Progress auto-calculates per course and per student
+  - Show progress ring/bar in UI
+- Notifications:
+  - Toast system (success/error/info)
+  - Confirm dialogs for destructive actions
+- Loading states:
+  - Skeleton loaders when switching pages/tabs (simulate async with setTimeout)
+- Empty states:
+  - When no courses match filters, show a friendly empty state with CTA
+
+# VISUAL DESIGN SYSTEM (VERY IMPORTANT)
+Create a polished theme using CSS variables:
+- Color palette: calm, professional, non-neon.
+  - Primary: deep indigo/slate
+  - Accent: muted teal/emerald (sparingly)
+  - Backgrounds: soft off-white and deep near-black with blue undertones in dark mode
+  - Borders: subtle, low-contrast
+  - Status colors (success/warn/error) muted and tasteful
+- Typography:
+  - Use system font stack (e.g., ui-sans-serif / -apple-system) with refined sizes and line-heights
+  - Clear hierarchy (H1/H2/H3, subtle body, quiet secondary text)
+- Components:
+  - Sidebar with icons (use inline SVG icons you create)
+  - Topbar with search field + role switch + theme toggle
+  - Cards with subtle shadows
+  - Buttons: primary/secondary/ghost/destructive
+  - Inputs: clean, accessible, modern
+  - Pills/chips for tags and statuses
+  - Tables with sticky header on desktop
+  - Modals and drawers with backdrop, focus trap, ESC to close
+
+# TECHNICAL IMPLEMENTATION DETAILS
+- Use a small client-side router (hash-based) or view state manager:
+  - Views: #/dashboard, #/courses, #/course/:id
+- Store data in localStorage with versioning/migration:
+  - On first load, seed mock data
+  - Provide a “Reset demo data” action in Settings
+- Code organization inside the single HTML:
+  - Keep JS readable and modular (IIFEs or modules pattern)
+  - Avoid global pollution
+  - Provide clear section comments: DATA, STORE, ROUTER, UI RENDER, COMPONENTS, EVENTS, UTIL
+- Performance:
+  - Efficient DOM updates (template strings + targeted updates)
+  - Debounced search
+- Accessibility:
+  - Focus states for all interactive elements
+  - aria-labels for icon buttons
+  - Role switch is a real control (select menu or segmented control)
+  - Reduced motion: respect prefers-reduced-motion
+
+# OUTPUT FORMAT (STRICT)
+Return ONLY the final HTML code. No explanation. No markdown fences. No extra commentary.
+
+# QUALITY BAR
+This should look like a premium SaaS admin UI:
+- Balanced spacing, consistent alignment, crisp component styling
+- Dark mode must be equally polished
+- Interactions feel smooth and intentional
+- Copywriting is professional (microcopy like “No courses found”, “Create your first course”, etc.)
+- Make it visually impressive without being flashy.
+
+Now generate the complete single HTML file accordingly.
